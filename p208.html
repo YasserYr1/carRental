@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rent a car in Benslimane, Morocco! Explore the city and surrounding areas with our wide selection of reliable and affordable vehicles. Book online today!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./assets/bgImage.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LuxyWorld</title>
+</head>
+<body>
+    <main class="flex flex-col bg-[#f7fcfe] h-screen">
+        <header class=" w-full flex items-center justify-between px-20 py-6 fixed z-[100] bg-[#f7fcfe]">
+          <a href="#" class=" text-3xl font-jersey font-bold">Car Rentals</a>
+  
+          <nav class=" lg:flex hidden gap-8 text-xl">
+            <a href="/#home" class=" border-b-2 border-gray-500 py-2">Home</a>
+            <a href="/#collection" class=" py-2">Collection</a>
+            <a href="/#localisation" class=" py-2">Localisation</a>
+            <a href="/#collection" class=" py-2">Features</a>
+            <a href="/#localisation" class=" py-2">About-us</a>
+          </nav>
+  
+          <div class=" flex gap-6">
+            <i class="fa-brands fa-facebook text-2xl"></i>
+            <i class="fa-brands fa-instagram text-2xl"></i>
+            <i class="fa-brands fa-x-twitter text-2xl"></i>
+          </div>
+        </header>
+
+        <section>
+            <div class="w-full mt-[96px] flex items-center justify-center flex-col py-6">
+                <h3 class="text-2xl font-semibold">Car Détails</h3>
+                <h1 class="text-yellow-600 text-4xl font-bold">Mercedes C220</h1>
+            </div>
+            <div class="w-full flex flex-row mt-10">
+                <div class="w-1/2 flex flex-col items-center justify-center gap-2">
+                    <div class=" w-[70%] h-[72%] border shadow flex items-center justify-center">
+                        <img id="main-img" src="./assets/p208.png" alt="p208" class=" w-[80%]"/>
+                    </div>
+                    <div class="w-[70%] h-28 flex flex-row gap-2">
+                        <div class="w-1/4 h-full border flex items-center justify-center shadow">
+                            <img id="thumbnail" src="./assets/p208.png" alt="p208" class=" w-[80%] cursor-pointer"/>
+                        </div>
+                        <div class="w-1/4 h-full border flex items-center justify-center shadow">
+                            <img id="thumbnail" src="./assets/p208p.png" alt="p208" class=" w-[80%] cursor-pointer"/>
+                        </div>
+                        <div class="w-1/4 h-full border flex items-center justify-center shadow">
+                            <img id="thumbnail" src="./assets/p208.png" alt="p208" class=" w-[80%] cursor-pointer"/>
+                        </div>
+                        <div class="w-1/4 h-full border flex items-center justify-center shadow">
+                            <img id="thumbnail" src="./assets/p208p.png" alt="p208" class=" w-[80%] cursor-pointer"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/2 flex flex-col gap-2 px-10 py-5 gap-3">
+                    
+                    <div>
+                        <h1 class="text-3xl font-semibold text-yellow-600">Description</h1>
+                        <p class="mt-4 text-lg text-gray-700">
+                            Experience the thrill of urban driving with the Peugeot 208. This dynamic hatchback packs a punch, offering agility, 
+                            style, and impressive fuel economy. Conquer tight streets with confidence and explore hidden corners in comfort.
+                        </p>  
+                    </div>
+
+                    <div>
+                        <h1 class="text-3xl font-semibold text-yellow-600 mt-6">Horse Power</h1>
+                        <p class="mt-4 text-lg text-gray-700">- <span class="font-semibold">Top Speed:</span> 245 Kmph</p>
+                        <p class="mt-4 text-lg text-gray-700">- <span class="font-semibold">Acceleration:</span> (0-100 kmph) 7.3 seconds</p>
+                        <p class="mt-4 text-lg text-gray-700">- <span class="font-semibold">Engine:</span> 1993 cc, 4 Cylinders Inline, 4 Valves/Cylinder, DOHC</p>
+                        <p class="mt-4 text-lg text-gray-700">- <span class="font-semibold">Max Power:</span> 197 bhp @ 3600 rpm</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <h1 class="text-3xl font-semibold text-yellow-600">Rent Now</h1>
+                        <p class="mt-4 text-2xl font-bold underline text-gray-700">+212623142947</p>  
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const thumbnails = document.querySelectorAll("#thumbnail");
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener("click", event => {
+                const newImageSrc = event.target.src;
+                const mainImage = document.getElementById('main-img');
+                mainImage.src = newImageSrc;
+            })
+        })
+    </script>
+</body>
+</html>
